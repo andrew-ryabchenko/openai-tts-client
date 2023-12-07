@@ -1,4 +1,0 @@
-api_key=1234
-model=tts-1-hd
-foo=123
-bar=456
