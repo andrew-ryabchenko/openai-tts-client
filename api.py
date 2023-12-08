@@ -24,10 +24,11 @@ class TTSAPI:
         self.speed = speed
         self.response_format = respose_format
 
+    def get_limits(self):
         self.limit_requests,
         self.remaining_requests,
         self.reset_requests = self.__get_limits()
-
+        
     def __get_limits(self):
         body = {
             "model": self.model,
