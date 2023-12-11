@@ -15,9 +15,6 @@ class SegmentGenerator:
         self.segment_size = size
         self.infile = infile
 
-    def __del__(self) -> None:
-        del self.infile
-
     def generate_sentences(self) -> None:
         sentence: str = ""
 
@@ -53,21 +50,34 @@ class SegmentGenerator:
 
             if segment_len + sentence_len > self.segment_size:
                 
+                #Append segment to segments list.
                 self.segments.append(segment)
+                #Update segment counter and the length of the entire text. 
                 self.num_segments += 1
                 self.len_text += segment_len
-
-                #Segment constructed. Begin new segment from the current sentence.
+                #Begin new segment from the current sentence.
                 segment = sentence_text
 
             else:
                 segment += sentence_text
-
+        
+        #Process last leftover segment after the loop ends
         if segment:
             self.segments.append(segment)
             self.num_segments += 1
             self.len_text += len(segment)
 
 if __name__ == "__main__":
-    #TODO implement unit tests
-    pass
+    
+    infile = open("testing/input.txt")
+    
+    sg = SegmentGenerator(500, infile)
+
+    sg.generate_sentences()
+    sg.generate_segments()
+    
+    print(f"Segments: {sg.num_segments}")
+    print(f"Total characters: {sg.len_text}")
+    print(f"Segment size: {sg.segment_size}" )
+
+    infile.close()

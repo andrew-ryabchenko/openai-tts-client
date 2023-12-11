@@ -3,7 +3,6 @@ from exceptions import FileError
 
 class FileManager:
 
-    configuration_file: TextIOWrapper
     input_file: TextIOWrapper
     output_file: TextIOWrapper
 
@@ -20,11 +19,18 @@ class FileManager:
         return self.__dict__[name]
     
     def read(self, name: str, n: int = -1) -> str:
+        """Read the content of the file identified by 'name'."""
         return self.__dict__[name].read()
     
     def write(self, name: str, data: bytes) -> None:
+        """Write the file identified by 'name'."""
         file = self.__dict__[name]
         file.write(data)
+        
+    def close(self, name: str, data: bytes) -> None:
+        """Closes the file identified by 'name'."""
+        file = self.__dict__[name]
+        file.close()
 
 
 if __name__ == "__main__":
