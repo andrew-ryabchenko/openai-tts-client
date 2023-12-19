@@ -18,7 +18,7 @@ class DefaultAPIConfigurations(defaultdict):
             case "model":
                 return "tts-1"
             case "max_threads":
-                return 10
+                return "10"
             case _:
                 return None
 

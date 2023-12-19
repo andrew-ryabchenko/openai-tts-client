@@ -1,4 +1,4 @@
-<mxfile host="Electron" modified="2023-12-11T18:03:55.475Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="T3UOFiFvA_XEaR0KIgE_" version="22.1.2" type="device">
+<mxfile host="Electron" modified="2023-12-19T23:25:13.171Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/22.1.2 Chrome/114.0.5735.289 Electron/25.9.4 Safari/537.36" etag="gRgVLZQQPUGyP0Vgh4rE" version="22.1.2" type="device">
   <diagram name="Page-1" id="nxzP-WKnG5CjMn-z9xEN">
     <mxGraphModel dx="1642" dy="1927" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -29,71 +29,84 @@
           <mxGeometry y="60" width="280" height="50" as="geometry" />
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-11" value="" style="shape=table;startSize=0;container=1;collapsible=0;childLayout=tableLayout;" parent="1" vertex="1">
-          <mxGeometry x="220" y="-150" width="580" height="420" as="geometry" />
+          <mxGeometry x="220" y="-150" width="590" height="510" as="geometry" />
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-12" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="MZg2YMzQPQKOLDvqLEEp-11" vertex="1">
-          <mxGeometry width="580" height="130" as="geometry" />
+          <mxGeometry width="590" height="133" as="geometry" />
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-13" value="App" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="MZg2YMzQPQKOLDvqLEEp-12" vertex="1">
-          <mxGeometry width="292" height="130" as="geometry">
-            <mxRectangle width="292" height="130" as="alternateBounds" />
+          <mxGeometry width="297" height="133" as="geometry">
+            <mxRectangle width="297" height="133" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-14" value="&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;App&lt;/b&gt;&amp;nbsp;class represents an instance of the application.&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;It inherits from ArgumentParser (argparse package)&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;to parse user supplied arguments and handle display&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;as well as logic of command line interrface.&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;div style=&quot;border-color: var(--border-color);&quot;&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/div&gt;&lt;span style=&quot;&quot;&gt;It&#39;s run() method implements top level logic of the application&amp;nbsp;&lt;/span&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;span style=&quot;&quot;&gt;coordinates data flow between other components.&amp;nbsp;&lt;/span&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" parent="MZg2YMzQPQKOLDvqLEEp-12" vertex="1">
-          <mxGeometry x="292" width="288" height="130" as="geometry">
-            <mxRectangle width="288" height="130" as="alternateBounds" />
+          <mxGeometry x="297" width="293" height="133" as="geometry">
+            <mxRectangle width="293" height="133" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-15" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="MZg2YMzQPQKOLDvqLEEp-11" vertex="1">
-          <mxGeometry y="130" width="580" height="110" as="geometry" />
+          <mxGeometry y="133" width="590" height="112" as="geometry" />
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-16" value="Configuration" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="MZg2YMzQPQKOLDvqLEEp-15" vertex="1">
-          <mxGeometry width="292" height="110" as="geometry">
-            <mxRectangle width="292" height="110" as="alternateBounds" />
+          <mxGeometry width="297" height="112" as="geometry">
+            <mxRectangle width="297" height="112" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-17" value="&lt;div style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;&lt;b style=&quot;border-color: var(--border-color);&quot;&gt;Configuration&lt;/b&gt;&amp;nbsp;class serves as runtime source of configurations&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;such as file paths as well as configurations suplied via config file.&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;&lt;br style=&quot;border-color: var(--border-color);&quot;&gt;&lt;/div&gt;&lt;div style=&quot;border-color: var(--border-color); text-align: left;&quot;&gt;&lt;span style=&quot;border-color: var(--border-color); background-color: initial;&quot;&gt;As part of it&#39;s functionality it verifies validity of user-supplied paths&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;and other options.&lt;/span&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="MZg2YMzQPQKOLDvqLEEp-15" vertex="1">
-          <mxGeometry x="292" width="288" height="110" as="geometry">
-            <mxRectangle width="288" height="110" as="alternateBounds" />
+          <mxGeometry x="297" width="293" height="112" as="geometry">
+            <mxRectangle width="293" height="112" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-18" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="MZg2YMzQPQKOLDvqLEEp-11" vertex="1">
-          <mxGeometry y="240" width="580" height="50" as="geometry" />
+          <mxGeometry y="245" width="590" height="51" as="geometry" />
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-19" value="DefaultAPIConfiguration" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="MZg2YMzQPQKOLDvqLEEp-18" vertex="1">
-          <mxGeometry width="292" height="50" as="geometry">
-            <mxRectangle width="292" height="50" as="alternateBounds" />
+          <mxGeometry width="297" height="51" as="geometry">
+            <mxRectangle width="297" height="51" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-20" value="Extended version of &lt;b&gt;defaultdict &lt;/b&gt;where __missing__()&lt;br&gt;method is overwritten to return dufault values for non-required options that user may or might not provide." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" parent="MZg2YMzQPQKOLDvqLEEp-18" vertex="1">
-          <mxGeometry x="292" width="288" height="50" as="geometry">
-            <mxRectangle width="288" height="50" as="alternateBounds" />
+          <mxGeometry x="297" width="293" height="51" as="geometry">
+            <mxRectangle width="293" height="51" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-21" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="MZg2YMzQPQKOLDvqLEEp-11" vertex="1">
-          <mxGeometry y="290" width="580" height="50" as="geometry" />
+          <mxGeometry y="296" width="590" height="51" as="geometry" />
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-22" value="SegmentGenerator" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="MZg2YMzQPQKOLDvqLEEp-21" vertex="1">
-          <mxGeometry width="292" height="50" as="geometry">
-            <mxRectangle width="292" height="50" as="alternateBounds" />
+          <mxGeometry width="297" height="51" as="geometry">
+            <mxRectangle width="297" height="51" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-23" value="Segments the input data into chunks of text that are less or equal to a specified size and ensures that each segment is composed of complete sentences." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" parent="MZg2YMzQPQKOLDvqLEEp-21" vertex="1">
-          <mxGeometry x="292" width="288" height="50" as="geometry">
-            <mxRectangle width="288" height="50" as="alternateBounds" />
+          <mxGeometry x="297" width="293" height="51" as="geometry">
+            <mxRectangle width="293" height="51" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="MZg2YMzQPQKOLDvqLEEp-24" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="MZg2YMzQPQKOLDvqLEEp-11" vertex="1">
-          <mxGeometry y="340" width="580" height="80" as="geometry" />
+          <mxGeometry y="347" width="590" height="81" as="geometry" />
         </mxCell>
-        <mxCell id="MZg2YMzQPQKOLDvqLEEp-25" value="TTSAPI" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="MZg2YMzQPQKOLDvqLEEp-24" vertex="1">
-          <mxGeometry width="292" height="80" as="geometry">
-            <mxRectangle width="292" height="80" as="alternateBounds" />
+        <mxCell id="MZg2YMzQPQKOLDvqLEEp-25" value="ApiCall" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" parent="MZg2YMzQPQKOLDvqLEEp-24" vertex="1">
+          <mxGeometry width="297" height="81" as="geometry">
+            <mxRectangle width="297" height="81" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="MZg2YMzQPQKOLDvqLEEp-26" value="Responsible for communicating with OpenAI API service. It has methods to create audio from text, estimate cost of tts conversion, and check viability of an operation based on the number of remaining requests available within the user&#39;s current rate limit.&amp;nbsp;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" parent="MZg2YMzQPQKOLDvqLEEp-24" vertex="1">
-          <mxGeometry x="292" width="288" height="80" as="geometry">
-            <mxRectangle width="288" height="80" as="alternateBounds" />
+        <mxCell id="MZg2YMzQPQKOLDvqLEEp-26" value="&lt;b&gt;ApiCall&lt;/b&gt; class represents an an asynchronous call to Open AI tss model. It inherits from Thread class and overwrites run() method. This class encapsulates results of tss conversion in self.speech instance variable upon call completion." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" parent="MZg2YMzQPQKOLDvqLEEp-24" vertex="1">
+          <mxGeometry x="297" width="293" height="81" as="geometry">
+            <mxRectangle width="293" height="81" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="REywZzhqQZqp_4FOac_u-1" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="MZg2YMzQPQKOLDvqLEEp-11">
+          <mxGeometry y="428" width="590" height="82" as="geometry" />
+        </mxCell>
+        <mxCell id="REywZzhqQZqp_4FOac_u-2" value="FileManager" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;" vertex="1" parent="REywZzhqQZqp_4FOac_u-1">
+          <mxGeometry width="297" height="82" as="geometry">
+            <mxRectangle width="297" height="82" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="REywZzhqQZqp_4FOac_u-3" value="&lt;b&gt;FileManager&lt;/b&gt; class is responsible for managing files used by the program. It opens, reads, and writes files. This class serves as a runtime source of file handles." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;align=left;" vertex="1" parent="REywZzhqQZqp_4FOac_u-1">
+          <mxGeometry x="297" width="293" height="82" as="geometry">
+            <mxRectangle width="293" height="82" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
       </root>

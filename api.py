@@ -1,6 +1,6 @@
 from collections.abc import Callable, Iterable, Mapping
-from threading import Semaphore
 from typing import Any
+from threading import Semaphore
 import httpx
 from exceptions import APIError
 from threading import Thread
@@ -16,14 +16,19 @@ class ApiCall(Thread):
     response_format: str
     speed: float
     model: str
+    
+    semaphore: Semaphore
 
-    def __init__(self, data: str, group: None = None, 
+    def __init__(self, data: str, semaphore: Semaphore,
+                 group: None = None, 
                  target: Callable[..., object] | None = None,
                  name: str | None = None, args: Iterable[Any] = ..., 
                  kwargs: Mapping[str, Any] | None = None, *, 
                  daemon: bool | None = None) -> None:
         #Text data for current API call
         self.data = data
+        #Semaphore instance for thread synchronization
+        self.semaphore = semaphore
         #Call parent class constructor
         super().__init__(group, target, name, args, kwargs, daemon=daemon)
         
@@ -59,7 +64,7 @@ class ApiCall(Thread):
         return len_text / 1000 * 0.03
 
     def check_rpd(self, headers) -> bool:
-        """Check whether the RPD account limit has exceeded."""
+        """Check whether the RPD (requests per day) account limit has exceeded."""
 
         limit_requests = int(headers["x-ratelimit-limit-requests"])
         remaining_requests = int(headers["x-ratelimit-remaining-requests"])
@@ -76,6 +81,7 @@ class ApiCall(Thread):
         )
         
         try:
+            self.semaphore.acquire()
             response = client.audio.speech.create(
                 input=self.data,
                 model=ApiCall.model,
@@ -85,10 +91,13 @@ class ApiCall(Thread):
             )
             
             self.error = False
+            self.status_code = 200
+            
             self.speech = response.read()
-        
+
         #Rate limit exception handler
         except openai.RateLimitError as err:
+            self.semaphore.release()
             headers = err.response.headers
             if self.check_rpd(headers):
                 #RPD limit is exceeded.
@@ -100,10 +109,11 @@ class ApiCall(Thread):
                 #RPM is likely exceeded. Re-try again in 60s.
                 print("RPM limit exceeded. Re-trying in 60s.")
                 sleep(60.0)
-                self.run()
+                self.run(self.semaphore)
                 
         #All other types of API or network related exceptions   
         except openai.APIError as err:
+            self.semaphore.release()
             self.error = True
             self.status_code = err.status_code
             self.response = err.response
